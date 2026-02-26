@@ -27,6 +27,9 @@ body{
 
 .container{width:min(1120px, 92%); margin:0 auto}
 
+/* =========================================================
+   TOPO / NAV (VERSÃO LIMPA + LOGO CENTRAL NO MOBILE)
+   ========================================================= */
 .topbar{
   position:sticky;
   top:0;
@@ -34,36 +37,36 @@ body{
   background: rgba(7,10,15,.55);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,.06);
-
   height:70px;
-  overflow:visible;
 }
 
 .topbar__content{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:14px 0;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  padding: 0;
 }
+
 .brand{
-  position: relative;
-  height: 70px;       /* igual à topbar */
-  width: 120px;       /* espaço pro clique */
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  text-decoration:none;
+  color:inherit;
 }
+
+/* Logo SEM position absolute (nada de empurrar no mobile) */
 .brand__logo{
-  position: absolute;
-  left: 0;
-  top: 50%;
-
-  height: 120px;   /* TAMANHO DO LOGO */
-  width: auto;
-
-  transform: translateY(-65%); /* “sobe” e sai da barra */
-  object-fit: contain;
-  z-index: 999;
+  display:block;
+  height:44px;
+  width:auto;
+  max-width: 220px;
+  object-fit:contain;
 }
+
 .brand__name{font-weight:800; letter-spacing:.2px; line-height:1.1}
 .brand__tag{font-size:12px; color:var(--muted2)}
 
@@ -112,6 +115,9 @@ body{
 }
 .btn--small{padding:10px 14px; border-radius:12px; font-weight:800}
 
+/* =========================================================
+   HERO
+   ========================================================= */
 .hero{padding:64px 0 30px}
 .hero__grid{
   display:grid;
@@ -174,6 +180,9 @@ h1{
 }
 .hl strong{color:var(--text)}
 
+/* =========================================================
+   GLASS CARD
+   ========================================================= */
 .glass{
   position:relative;
   border-radius: var(--radius);
@@ -246,6 +255,9 @@ h1{
   pointer-events:none;
 }
 
+/* =========================================================
+   SEÇÕES / CARDS
+   ========================================================= */
 .section{padding:54px 0}
 .section--alt{
   background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
@@ -278,6 +290,9 @@ h1{
 .card h3{margin:0 0 8px; font-size:16px}
 .card p{margin:0; color:var(--muted); line-height:1.55}
 
+/* =========================================================
+   ABOUT
+   ========================================================= */
 .about{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
@@ -294,6 +309,9 @@ h1{
   font-weight:700;
 }
 
+/* =========================================================
+   CONTATO / FORM / MAPA
+   ========================================================= */
 .contactCard{
   border-radius: var(--radius);
   border: 1px solid rgba(255,255,255,.12);
@@ -354,6 +372,9 @@ textarea{resize:vertical}
 .map__title{font-weight:950}
 .map__sub{color:var(--muted)}
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .footer{
   margin-top:24px;
   padding:18px 0 30px;
@@ -371,6 +392,9 @@ textarea{resize:vertical}
 .footer__right a{color:var(--muted); text-decoration:none; font-weight:800}
 .footer__right a:hover{color:var(--text)}
 
+/* =========================================================
+   WHATSAPP FLOAT
+   ========================================================= */
 .wppFloat{
   position:fixed; right:16px; bottom:16px;
   z-index:60;
@@ -395,6 +419,9 @@ textarea{resize:vertical}
 }
 .wppFloat__text{font-size:14px}
 
+/* =========================================================
+   REVEAL
+   ========================================================= */
 .reveal{
   opacity:0;
   transform: translateY(12px);
@@ -405,13 +432,26 @@ textarea{resize:vertical}
   transform: translateY(0);
 }
 
-/* RESPONSIVO */
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
 @media (max-width: 980px){
   .hero__grid{grid-template-columns:1fr; gap:16px}
-  .cards{grid-template-columns:1fr; }
+  .cards{grid-template-columns:1fr;}
   .cards--mini{grid-template-columns:1fr 1fr}
   .about{grid-template-columns:1fr}
   .contactGrid{grid-template-columns:1fr}
+
+  /* mobile: logo central + menu na direita */
+  .brand{
+    flex: 1;
+    justify-content: center;
+  }
+  .brand__logo{
+    height: 40px;
+    max-width: 76vw;
+  }
+
   .nav__toggle{display:block}
   .nav__links{
     position:absolute;
@@ -431,53 +471,4 @@ textarea{resize:vertical}
   .nav__links.is-open{display:flex}
   .nav__links a{padding:10px 12px; border-radius:12px}
   .nav__links a:hover{background: rgba(255,255,255,.06)}
-}
-/* ===== OVERRIDE LOGO TOPO (cola no FINAL do style.css) ===== */
-.topbar{
-  overflow: visible !important; /* permite o logo "vazar" sem aumentar a barra */
-}
-
-.brand{
-  position: relative !important;
-  height: 100% !important;      /* usa a altura da topbar como base */
-  width: 200px !important;      /* área de clique */
-  display: flex !important;
-  align-items: center !important;
-}
-
-.brand__logo{
-  position: absolute !important;
-  left: 2 !important;
-  top: 20% !important;
-
-  height: 490px !important; /* aumenta AQUI */
-  width: auto !important;
-
-  transform: translateY(-41%) !important; /* faz sair pra cima */
-  object-fit: contain !important;
-  z-index: 9999 !important;
-}
-/* FORÇA CENTRALIZAÇÃO DA LOGO */
-img[src="logo.png"] {
-  display: block;
-  margin: 0 auto;
-}
-/* --- FIX BRUTO: LOGO CENTRAL NO MOBILE --- */
-@media (max-width: 768px) {
-  img[src*="logo"] {
-    display: block !important;
-    max-width: min(92vw, 360px) !important;
-    height: auto !important;
-
-    /* remove qualquer empurrão */
-    margin: 0 auto !important;
-    padding: 0 !important;
-    float: none !important;
-
-    /* remove posicionamento/transform que desloca */
-    position: static !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
-  }
 }
