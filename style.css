@@ -506,3 +506,19 @@ textarea{resize:vertical}
   /* mantém logo central e menu na direita */
   .brand{ flex: 1; justify-content: center; }
 }
+/* ===== REMOVE SCROLL HORIZONTAL (ESPAÇO LATERAL) ===== */
+html, body{
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* imagens nunca estouram a tela */
+img, svg{
+  max-width: 100%;
+  height: auto;
+}
+
+/* evita elementos com 100vw (que cria sobra por causa da barra/viewport) */
+*{
+  max-width: 100vw;
+}
