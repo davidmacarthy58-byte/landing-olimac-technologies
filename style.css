@@ -462,3 +462,22 @@ img[src="logo.png"] {
   display: block;
   margin: 0 auto;
 }
+/* --- FIX BRUTO: LOGO CENTRAL NO MOBILE --- */
+@media (max-width: 768px) {
+  img[src*="logo"] {
+    display: block !important;
+    max-width: min(92vw, 360px) !important;
+    height: auto !important;
+
+    /* remove qualquer empurrão */
+    margin: 0 auto !important;
+    padding: 0 !important;
+    float: none !important;
+
+    /* remove posicionamento/transform que desloca */
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+  }
+}
