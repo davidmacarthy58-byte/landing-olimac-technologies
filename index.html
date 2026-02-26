@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OliMac Technologies</title>
+  <meta name="description" content="Tecnologia que constrói o amanhã. Sites, sistemas e automações para negócios que querem crescer." />
+  <link rel="icon" href="imagens/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- CONFIGURAÇÃO RÁPIDA (edite aqui e pronto) -->
+  <script>
+  window.SITE = {
+    nome: "OliMac Technologies",
+    slogan: "Tecnologia que constrói o amanhã.",
+    cidade: "Sapucaia do Sul - RS",
+    email: "contato@olimac.com.br",
+    telefone: "(51) 99999-9999",
+    enderecoLinha: "R. Monteiro Lobato, 80 — COHAB",
+    whatsappNumero: "5551983578447",
+    whatsappMensagem: "Olá! Vim pela landing da OliMac. Quero um orçamento ",
+    instagramUrl: "https://instagram.com/",
+    githubUrl: "https://github.com/",
+    siteUrl: "https://olimac.com.br",
+
+    mapaEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.8054132374223!2d-51.16438532389665!3d-29.812165520545015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951968b9d8277f19%3A0x43e81322814c1f0c!2sR.%20Monteiro%20Lobato%2C%2080%20-%20COHAB%2C%20Sapucaia%20do%20Sul%20-%20RS%2C%2093212-620!5e0!3m2!1spt-BR!2sbr!4v1772106754280!5m2!1spt-BR!2sbr",
+
+    destaque: [
+      "Sites rápidos e responsivos",
+      "Sistemas sob medida",
+      "Automações e integrações",
+      "Suporte e evolução contínua"
+    ],
+
+    servicos: [
+      { titulo: "Landing Pages de Alta Conversão", desc: "Página rápida, clara e com CTA forte. Ideal para captar leads e fechar no WhatsApp." },
+      { titulo: "Sites Institucionais", desc: "Presença profissional com SEO básico, design moderno e performance." },
+      { titulo: "Sistemas Web (Sob Medida)", desc: "Painéis, cadastros, agendas, dashboards e fluxos personalizados para o seu negócio." },
+      { titulo: "Automações & Integrações", desc: "Integrações com APIs, formulários, e-mails, planilhas, CRM e automações de rotina." }
+    ],
+
+    vantagens: [
+      { titulo: "Velocidade", desc: "Entrega rápida e com padrão profissional." },
+      { titulo: "Clareza", desc: "Comunicação direta: você sabe o que está sendo feito." },
+      { titulo: "Qualidade", desc: "Código limpo, layout consistente e responsivo." },
+      { titulo: "Escalável", desc: "Pensado para crescer junto com seu negócio." }
+    ],
+
+    cases: [
+      { titulo: "Landing de Serviços", desc: "Estrutura completa: hero, serviços, prova social e CTA no WhatsApp." },
+      { titulo: "Sistema Interno", desc: "Painel com login, cadastros e relatórios para operação diária." },
+      { titulo: "Automação de Atendimento", desc: "Captação + mensagem automática + organização de leads." }
+    ]
+  };
+</script>
+
+  <header class="topbar" id="topo">
+    <div class="container topbar__content">
+     <a class="brand" href="#topo" aria-label="Ir para o topo">
+  <img class="brand__logo" src="imagens/logo.png" alt="Logo OliMac" />
+</a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#cases">Cases</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a class="btn btn--small" href="#contato">Falar agora</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left reveal">
+          <div class="pill">
+            <span class="dot"></span>
+            <span data-site="cidade"></span>
+          </div>
+
+          <h1>
+            Construímos tecnologia para
+            <span class="grad">negócios que querem crescer</span>.
+          </h1>
+
+          <p class="hero__lead" data-site="slogan"></p>
+
+          <div class="hero__cta">
+            <a class="btn" id="btnWhatsappHero" href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+            <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+          </div>
+
+          <div class="hero__highlights" id="highlights"></div>
+        </div>
+
+        <div class="hero__right reveal">
+          <div class="glass">
+            <div class="glass__header">
+              <div class="chip">OliMac Stack</div>
+              <div class="status"><span class="pulse"></span> Online</div>
+            </div>
+
+            <div class="glass__body">
+              <div class="metric">
+                <div class="metric__label">Performance</div>
+                <div class="metric__bar"><span style="width: 92%"></span></div>
+              </div>
+              <div class="metric">
+                <div class="metric__label">Design</div>
+                <div class="metric__bar"><span style="width: 95%"></span></div>
+              </div>
+              <div class="metric">
+                <div class="metric__label">Automação</div>
+                <div class="metric__bar"><span style="width: 88%"></span></div>
+              </div>
+
+              <div class="glass__cta">
+                <div class="glass__ctaTitle">Quer um orçamento rápido?</div>
+                <p>Me diga seu objetivo e eu te retorno com proposta e prazo.</p>
+                <a class="btn btn--small" id="btnWhatsappCard" href="#" target="_blank" rel="noopener">Pedir orçamento</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Serviços</h2>
+          <p>Escolha o que faz sentido agora. Dá pra começar simples e evoluir.</p>
+        </div>
+        <div class="cards" id="servicosGrid"></div>
+      </div>
+    </section>
+
+    <!-- VANTAGENS -->
+    <section class="section section--alt" id="vantagens">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Por que a OliMac?</h2>
+          <p>Entrega rápida, visual moderno e foco em resultado.</p>
+        </div>
+        <div class="cards cards--mini" id="vantagensGrid"></div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>O que podemos construir</h2>
+          <p>Exemplos de entregas e soluções que costumam gerar retorno.</p>
+        </div>
+        <div class="cards" id="casesGrid"></div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section--alt" id="sobre">
+      <div class="container about">
+        <div class="about__left reveal">
+          <h2>Sobre</h2>
+          <p>
+            A <strong data-site="nome"></strong> cria landing pages, sites, sistemas e automações com foco em
+            <strong>performance</strong>, <strong>clareza</strong> e <strong>crescimento</strong>.
+            Se você quer parar de perder oportunidades por falta de presença digital ou processos lentos, a gente resolve.
+          </p>
+
+          <div class="about__bullets">
+            <div class="bullet">✅ Layout futurista + responsivo</div>
+            <div class="bullet">✅ CTA e captura de lead</div>
+            <div class="bullet">✅ Integrações e automações</div>
+            <div class="bullet">✅ Manutenção e evolução</div>
+          </div>
+        </div>
+
+        <div class="about__right reveal">
+          <div class="contactCard">
+            <div class="contactCard__top">
+              <div class="contactCard__title">Contato rápido</div>
+              <div class="contactCard__sub">Respondo no WhatsApp</div>
+            </div>
+
+            <div class="contactCard__info">
+              <div class="infoRow"><span>Email</span><a href="#" id="emailLink"></a></div>
+              <div class="infoRow"><span>Telefone</span><a href="#" id="telLink"></a></div>
+              <div class="infoRow"><span>Endereço</span><span data-site="enderecoLinha"></span></div>
+            </div>
+
+            <div class="contactCard__actions">
+              <a class="btn" id="btnWhatsappSobre" href="#" target="_blank" rel="noopener">Falar no WhatsApp</a>
+              <a class="btn btn--ghost" id="btnInstagram" href="#" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Vamos começar?</h2>
+          <p>Me diz o que você precisa e eu te retorno com proposta.</p>
+        </div>
+
+        <div class="contactGrid">
+          <form class="form reveal" id="formContato">
+            <div class="form__row">
+              <label>Seu nome</label>
+              <input type="text" name="nome" placeholder="Ex: David" required />
+            </div>
+            <div class="form__row">
+              <label>Seu WhatsApp</label>
+              <input type="tel" name="whats" placeholder="Ex: (51) 99999-9999" required />
+            </div>
+            <div class="form__row">
+              <label>O que você quer construir?</label>
+              <select name="tipo" required>
+                <option value="">Selecionar…</option>
+                <option>Landing page</option>
+                <option>Site institucional</option>
+                <option>Sistema web</option>
+                <option>Automação/Integração</option>
+              </select>
+            </div>
+            <div class="form__row">
+              <label>Mensagem</label>
+              <textarea name="msg" rows="4" placeholder="Me conte objetivo, prazo e referências…" required></textarea>
+            </div>
+
+            <button class="btn" type="submit">Enviar no WhatsApp</button>
+            <p class="form__hint">Ao enviar, abre o WhatsApp com a mensagem pronta.</p>
+          </form>
+
+          <div class="map reveal">
+            <iframe
+              id="mapFrame"
+              title="Mapa"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              src=""
+            ></iframe>
+            <div class="map__footer">
+              <div class="map__title">Atendimento</div>
+              <div class="map__sub"><span data-site="cidade"></span> • Remoto também</div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <div class="footer__left">
+            <img src="imagens/logo.png" alt="Logo" class="footer__logo" />
+            <div>
+              <div class="footer__name" data-site="nome"></div>
+              <div class="footer__tag" data-site="slogan"></div>
+            </div>
+          </div>
+
+          <div class="footer__right">
+            <a id="btnGithub" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a id="btnSite" href="#" target="_blank" rel="noopener">Site</a>
+            <a href="#topo">Topo ↑</a>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a class="wppFloat" id="wppFloat" href="#" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">
+      <span class="wppFloat__icon">✦</span>
+      <span class="wppFloat__text">WhatsApp</span>
+    </a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
