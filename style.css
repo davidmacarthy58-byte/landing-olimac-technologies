@@ -457,3 +457,8 @@ textarea{resize:vertical}
   object-fit: contain !important;
   z-index: 9999 !important;
 }
+/* FORÇA CENTRALIZAÇÃO DA LOGO */
+img[src="logo.png"] {
+  display: block;
+  margin: 0 auto;
+}
