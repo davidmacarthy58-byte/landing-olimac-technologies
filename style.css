@@ -448,8 +448,8 @@ textarea{resize:vertical}
     justify-content: center;
   }
   .brand__logo{
-    height: 40px;
-    max-width: 76vw;
+    height: 92px;     /*bem mais visivel*/
+    max-width: 90vw;
   }
 
   .nav__toggle{display:block}
@@ -471,4 +471,38 @@ textarea{resize:vertical}
   .nav__links.is-open{display:flex}
   .nav__links a{padding:10px 12px; border-radius:12px}
   .nav__links a:hover{background: rgba(255,255,255,.06)}
+}
+/* ===== AJUSTE FINAL: logo grande + alinhada ===== */
+
+/* desktop: barra um pouco maior pra caber a logo */
+.topbar{
+  height: 100px !important;
+}
+.topbar__content{
+  height: 100px !important;
+}
+
+/* força logo grande, mas dentro da barra */
+.topbar .brand img{
+  height: 150px !important;
+  width: auto !important;
+  margin-top: 60px !important;   /* desce um pouco */
+  max-width: none !important;
+}
+
+/* mobile: um pouco menor e barra maior */
+@media (max-width: 980px){
+  .topbar{
+    height: 94px !important;
+  }
+  .topbar__content{
+    height: 94px !important;
+  }
+  .topbar .brand img{
+    height: 78px !important;
+    margin-top: 8px !important; /* desce mais no mobile */
+  }
+
+  /* mantém logo central e menu na direita */
+  .brand{ flex: 1; justify-content: center; }
 }
